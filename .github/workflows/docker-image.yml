@@ -30,19 +30,10 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWD: ${{ secrets.DOCKER_PASSWD }}
         NEW_VERSION: ${{ steps.version.outputs.version }}
-        NEW_VERSION2: ${{ steps.version.outputs.version_tag }}
-        NEW_VERSION3: ${{ steps.version.outputs.previous_version }}
-        NEW_VERSION4: ${{ steps.version.outputs.major }}
-        NEW_VERSION5: ${{ steps.version.outputs.minor }}
-        NEW_VERSION6: ${{ steps.version.outputs.patch }}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWD
         echo "New version: $NEW_VERSION!!!!!!!"
-        echo "New version: $NEW_VERSION2!!!!!!!"
-        echo "New version: $NEW_VERSION3!!!!!!!"
-        echo "New version: $NEW_VERSION4!!!!!!!"
-        echo "New version: $NEW_VERSION5!!!!!!!"
-        echo "New version: $NEW_VERSION6!!!!!!!"
+        
     #- name: Build the Docker image
     #  run: |
      #   docker build -t iscfer933/test-docker-graphql:0.0.2 .
