@@ -27,7 +27,9 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build -t iscfer933/test-docker-graphql:0.0.2 .
+        docker build -t iscfer933/test-docker-graphql:latest .
 
     - name: Push Docker image
       run: |
         docker push iscfer933/test-docker-graphql:0.0.2
+        docker push iscfer933/test-docker-graphql:latest
