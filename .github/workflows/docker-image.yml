@@ -30,4 +30,4 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push iscfer933/test-docker-graphql:0.0.2 .
+        docker push iscfer933/test-docker-graphql:0.0.2
