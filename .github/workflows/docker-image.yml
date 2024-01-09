@@ -34,6 +34,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWD
         echo "New version: $NEW_VERSION!!!!!!!"
         echo "Subir feat"
+        echo "Subir major"
     #- name: Build the Docker image
     #  run: |
      #   docker build -t iscfer933/test-docker-graphql:0.0.2 .
