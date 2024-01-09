@@ -25,7 +25,9 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWD
         
     - name: Build the Docker image
-      run: docker build -t iscfer933/test-docker-graphql:0.0.2 .
+      run: |
+        docker build -t iscfer933/test-docker-graphql:0.0.2 .
 
     - name: Push Docker image
-      run: docker push iscfer933/test-docker-graphql:0.0.2 .
+      run: |
+        docker push iscfer933/test-docker-graphql:0.0.2 .
