@@ -22,8 +22,10 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASSWD: ${{ secrets.DOCKER_PASSWD }}
       run: |
-        echo "Iniciando logi docker hub"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWD
-        echo "Fin del login docker hub"
-#    - name: Build the Docker image
-#      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        
+    - name: Build the Docker image
+      run: docker build -t iscfer933/test-docker-graphql:0.0.2 .
+
+    - name: Push Docker image
+      run: docker push iscfer933/test-docker-graphql:0.0.2 .
